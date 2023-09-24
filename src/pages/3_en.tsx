@@ -102,12 +102,12 @@ export default function Third_EN() {
 	}
 
 
-	const [quiz, setQuiz] = useState("Are you over 64?")
+	const [quiz, setQuiz] = useState('Are you over the age of 60? ')
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
-	const [yes, setYes] = useState("Yes, I'm 65 or Older")
-	const [no, setNo] = useState("No, I'm 64 or Younger")
+	const [yes, setYes] = useState("Yes")
+	const [no, setNo] = useState("No")
 	
 	
 	const stepProcess = () => {
@@ -270,11 +270,11 @@ export default function Third_EN() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-					<div className='main-des-title'>Americans Over 64 Can Now Qualify For The $3600 FLEX Card In 2023. Here's How!</div>
+					<div className='main-des-title'>Americans Over 60 Can Now Qualify For The $3600 FLEX Card In 2023. Here's How!</div>
 					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
                     <img className='topic-img-5' src = {Head_bg} alt = "head"/>
-					<div className='main-des-5'>Americans over 64 can pre-qualify for the 2023 Flex Spending Card that gives them up to $3600. Seniors can use the funds for dental or vision, groceries, rent, utility bills, medication and more.</div>
-					<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to upgrade your benefits ends on May 31st</b> so it's best to call and get your Flex Card locked in while it's still available.</div>
+					<div className='main-des-5'>Americans over 60 years old can claim the 2023 Flex Spending Card that gives them up to $3600. Americans can use the funds to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have! .</div>
+					<div className='main-des-5' style = {{marginTop:"1rem"}}>If you have not yet claimed your monthly allowance then answer the questions below and once approved you will have your $3,600 Flex Card mailed to you within a few days ready for use!</div>
 					</div>
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>
