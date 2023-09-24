@@ -182,7 +182,7 @@ export default function Third_EN() {
 	}, [step])
 
 	useEffect(() => {
-		alert("hey")
+		// alert("hey")
 	}, [])
 
 	const topScroll = (id: any) => {
