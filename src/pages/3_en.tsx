@@ -181,6 +181,10 @@ export default function Third_EN() {
 		stepProcess()
 	}, [step])
 
+	useEffect(() => {
+		alert("hey")
+	}, [])
+
 	const topScroll = (id: any) => {
 			// window.scrollTo(0, 0);
 			// window.innerWidth < 1200 ? setIsMobile(false) : scrollTo({ id });
