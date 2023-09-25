@@ -13,6 +13,7 @@ import Forth_SP from './pages/4_sp';
 import Fifth_EN from './pages/5_en';
 import Fifth_SP from './pages/5_sp';
 import Sixth_SP from './pages/6_en';
+import S from './pages/7'
 
 import Visits from "./pages/visits";
 
@@ -27,13 +28,15 @@ function App() {
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
           <Route path = "/spanaca2" element = {<Second_SP />} />
-          <Route path = "/engmed1" element = {<Third_EN />} />
+          {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
+             <Route path = "/engmed1" element = {<S />} />
           <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
           <Route path = "/spanfe1" element = {<Forth_SP />} />
           <Route path = "/engerc1" element = {<Fifth_EN />} />
           <Route path = "/spandeb1" element = {<Fifth_SP />} />
           <Route path = "/engdeb1" element = {<Sixth_SP />} />
+          {/* <Route path = "/a" element = {<S />} /> */}
 
           <Route path = "/view" element = {<Visits />} />
           <Route path = "/*" element = {<NotFound />} />
