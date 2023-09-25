@@ -19,7 +19,7 @@ TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
   useEffect(() => {
-    window.document.title = "Verifique su elegibilidad ahora";
+    window.document.title = "Senior's Flex Program 2023";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
@@ -224,7 +224,7 @@ export default function Fifth_SP() {
   return (
     <div>
       <div className="top-sticky-blue" id="top">
-        Emergency Relief Program
+      Senior's Flex Program 2023
       </div>
       {step === "process" ? (
         <>
@@ -246,8 +246,8 @@ export default function Fifth_SP() {
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
                 If you have not yet claimed your monthly allowance then answer
-                the questions below and once approved you will have your $3,600
-                Flex Card mailed to you within a few days ready for use!
+                the questions below and once approved <b>you will have your $3,600
+                Flex Card mailed to you within a few days ready for use!</b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
