@@ -231,9 +231,10 @@ export default function Fifth_SP() {
           <div className="main-container-5">
             <div className="main-descrition-5">
               <div className="main-des-title-6">
+                				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-                  Americans Over 60 Can Now Qualify For The $800 Grocery
-                  Allowance + $1,200 Visa Spend Card. Here's How!
+                  Americans Over 60 Can Now Qualify For The<span style={{backgroundColor:"#fde047"}}> $800 Grocery
+                  Allowance + $1,200 Visa Spend Card.</span> Here's How!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
