@@ -6,10 +6,12 @@ import "./styles.scss";
 
 import { scrollTo } from "../utils";
 
-import Head_bg from "../assets/hero5.png";
+import Head_bgs from "../assets/hero11.jpg";
+
 import Headline from "../assets/headline_spandeb1.png";
 
 // google tag manager
+ 
 
 const tagManagerArgs = {
   gtmId: "GTM-KZJBC3B",
@@ -238,7 +240,7 @@ export default function Fifth_SP() {
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
-              <img className="topic-img-middle" src={Head_bg} alt="head" />
+              <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
                 Americans over 60 years old can claim the $800 Grocery Allowance
                 AND the $1,200 Visa Spending Card. These funds can be used to
