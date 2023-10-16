@@ -16,7 +16,7 @@ import Sixth_SP from './pages/6_en';
 import S from './pages/7'
 import New from './pages/8'
 import Urgent from './pages/9'
-
+import VeryNew from './pages/10'
 import Visits from "./pages/visits";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           <Route path = "/spanaca2" element = {<Second_SP />} />
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
              <Route path = "/engmed1" element = {<S />} />
-             <Route path = "/km-engmed1" element = {<S />} /> 
+             <Route path = "/km-engmed1" element = {<VeryNew />} /> 
              <Route path = "/km-engmedgroc1" element = {<Urgent/>} />
           <Route path = "/engmedgroc1" element = {<New/>}/>
           <Route path = "/spanmed1" element = {<Third_SP />} />
