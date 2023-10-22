@@ -18,7 +18,7 @@ import New from './pages/8'
 import Urgent from './pages/9'
 import VeryNew from './pages/10'
 import Visits from "./pages/visits";
-import Test from './pages/111'
+import Test from './pages/111';
 
 function App() {
  
