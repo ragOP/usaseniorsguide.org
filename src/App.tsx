@@ -18,9 +18,10 @@ import New from './pages/8'
 import Urgent from './pages/9'
 import VeryNew from './pages/10'
 import Visits from "./pages/visits";
+import Test from './pages/111'
 
 function App() {
-  console.log('test');
+ 
   return (
     <Router>
       <div className="App">
@@ -41,6 +42,7 @@ function App() {
           <Route path = "/engerc1" element = {<Fifth_EN />} />
           <Route path = "/spandeb1" element = {<Fifth_SP />} />
           <Route path = "/engdeb1" element = {<Sixth_SP />} />
+          <Route path = "/test" element = {<Test />} />
           {/* <Route path = "/a" element = {<S />} /> */}
 
           <Route path = "/view" element = {<Visits />} />
