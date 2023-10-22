@@ -8,6 +8,7 @@ import { scrollTo } from "../utils";
 
 import Head_bg from "../assets/hero5.png";
 import Headline from "../assets/headline_spandeb1.png";
+import { useNavigate } from "react-router-dom";
 
 // google tag manager
 
@@ -89,25 +90,36 @@ export default function Fifth_SP() {
         )
         .catch((err) => console.log(err));
     });
+
+    // Redirect to the specified URL
+
   };
 
   const [quiz, setQuiz] = useState("Are you over the age of 60?  ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
+  const navigate = useNavigate();
 
   const stepProcess = () => {
-    if (step === "Reviewing Your Answers...") {
+    if (step === "Checking Your Eligibility...") {
       setTimeout(() => {
-        setStep("Matching With Best Options...");
+        setStep("You're Eligible ✅️...");
       }, 1500);
     }
-    if (step === "Matching With Best Options...") {
+    if (step === "You're Eligible ✅️...") {
       setTimeout(() => {
-        setStep("Confirming Eligibility...");
+        setStep("3 Licensed Agents Available ✅️");
       }, 1500);
     }
-    if (step === "Confirming Eligibility...") {
+    if (step === "3 Licensed Agents Available ✅️") {
+        setTimeout(() => {
+          setStep("Redirecting You Now...");
+        }, 1500);
+      }
+
+
+    if (step === "Redirecting You Now...") {
       setTimeout(() => {
         setStep("completed");
 
@@ -162,7 +174,7 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setQuiz("2. Do you live in the United States?");
     } else {
-      setStep("Reviewing Your Answers...");
+      setStep("Checking Your Eligibility...");
       topScroll("top");
     }
 
@@ -194,7 +206,7 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setQuiz("2. Do you live in the United States?");
     } else {
-      setStep("Reviewing Your Answers...");
+      setStep("Checking Your Eligibility...");
       topScroll("top");
     }
 
@@ -220,7 +232,12 @@ export default function Fifth_SP() {
         .catch((err) => console.log(err));
     });
   };
-
+  useEffect(() => {
+    if (step === "completed") {
+      // Redirect to the specified URL when step is "completed"
+      window.location.href = "https://policynational.com/call-vs/?c=21420&source={{value}}&pcid={{value}}";
+    }
+  }, [step]);
   return (
     <div style={{ backgroundColor: "rgb(233, 242, 255)" }}>
       <div className="top-sticky-blue-test" id="top">
@@ -234,7 +251,7 @@ export default function Fifth_SP() {
         <>
           <div className="main-container-5">
             <div className="main-descrition-5">
-              <div className="main-des-title-6">
+              <div className="main-des-title-6-test">
                 <b>
                   Americans Over 60 Can Now Qualify For{" "}
                   <span style={{ color: "rgb(0, 74, 155)" }}>
@@ -243,7 +260,6 @@ export default function Fifth_SP() {
                   In 2023. Here's How!
                 </b>
               </div>
-              {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bg} alt="head" />
               <div className="main-des-5">
                 Americans over 60 years old can claim the 2023 Flex Spending
@@ -259,7 +275,6 @@ export default function Fifth_SP() {
                   days ready for use!
                 </b>
               </div>
-              {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
             <div className="survey">
               <div className="quiz-5" id="btn">
@@ -282,27 +297,7 @@ export default function Fifth_SP() {
         </div>
       ) : (
         <div className="checking">
-          <div className="congrats">Congratulation, You Qualify!</div>
-          <div className="top-description-5">
-            Make A <b>Quick Call</b> To Claim Your Flex Card!
-          </div>
-          <div className="spots-count">Spots remaining: 4</div>
-          <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18446720874">
-            <div className="ok" onClick={handleCall}>
-              CALL (844) 672-0874
-            </div>
-          </a>
-          <div className="sub-title">We Have Reserved Your Spot</div>
-          <div className="sub-description">
-            Due to high call volume, your official agent is waiting for only{" "}
-            <b>3 minutes</b>, then your spot will not be reserved.
-          </div>
-          <div className="timer">
-            <div className="timer-cell">{min}</div>
-            <div className="timer-cell">:</div>
-            <div className="timer-cell">{second}</div>
-          </div>
+   
         </div>
       )}
       <div className="footer">
