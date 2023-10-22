@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 //@ts-ignore
 import TagManager from "react-gtm-module";
 import axios from "axios";
@@ -17,6 +17,9 @@ const tagManagerArgs = {
 };
 
 TagManager.initialize(tagManagerArgs);
+
+const source =
+  "https://policynational.com/call-vs/?c=21420&source={{20o0}}&pcid={{value}}";
 
 export default function Fifth_SP() {
   useEffect(() => {
@@ -92,7 +95,6 @@ export default function Fifth_SP() {
     });
 
     // Redirect to the specified URL
-
   };
 
   const [quiz, setQuiz] = useState("Are you over the age of 60?  ");
@@ -113,11 +115,10 @@ export default function Fifth_SP() {
       }, 1500);
     }
     if (step === "3 Licensed Agents Available ✅️") {
-        setTimeout(() => {
-          setStep("Redirecting You Now...");
-        }, 1500);
-      }
-
+      setTimeout(() => {
+        setStep("Redirecting You Now...");
+      }, 1500);
+    }
 
     if (step === "Redirecting You Now...") {
       setTimeout(() => {
@@ -232,12 +233,17 @@ export default function Fifth_SP() {
         .catch((err) => console.log(err));
     });
   };
-  useEffect(() => {
-    if (step === "completed") {
-      // Redirect to the specified URL when step is "completed"
-      window.location.href = "https://policynational.com/call-vs/?c=21420&source={{value}}&pcid={{value}}";
-    }
-  }, [step]);
+  //   useEffect(() => {
+  //     if (step === "completed") {
+  //       // Redirect to the specified URL when step is "completed"
+  //       window.location.href = "https://policynational.com/call-vs/?c=21420&source={{value}}&pcid={{value}}";
+  //     }
+  //   }, [step]);
+  const iframeStyle = {
+    width: "100%",
+    height: "100px",
+    overflow: "hidden",
+  };
   return (
     <div style={{ backgroundColor: "rgb(233, 242, 255)" }}>
       <div className="top-sticky-blue-test" id="top">
@@ -277,7 +283,7 @@ export default function Fifth_SP() {
               </div>
             </div>
             <div className="survey">
-              <div className="quiz-5-test" id="btn">
+              <div className="quiz-5" id="btn">
                 {quiz}
               </div>
               <div className="answer">
@@ -297,7 +303,36 @@ export default function Fifth_SP() {
         </div>
       ) : (
         <div className="checking">
-   
+          <div className="congrats">Congratulation, You Qualify!</div>
+          <div className="top-description-5">
+            Make A <b>Quick Call</b> To Claim Your Flex Card!
+          </div>
+          <div className="spots-count">Spots remaining: 4</div>
+          <div >
+            <iframe
+            scrolling="no"
+              src="https://policynational.com/call-vs/?c=21420&source={{20o0}}&pcid={{value}}"
+            
+              style={{
+                aspectRatio: "16/9",
+                width: "100%",
+               
+              }}
+            ></iframe>
+          </div>
+
+          <div style={{ marginTop: "10px" }} className="sub-title">
+            We Have Reserved Your Spot
+          </div>
+          <div className="sub-description">
+            Due to high call volume, your official agent is waiting for only{" "}
+            <b>3 minutes</b>, then your spot will not be reserved.
+          </div>
+          <div className="timer">
+            <div className="timer-cell">{min}</div>
+            <div className="timer-cell">:</div>
+            <div className="timer-cell">{second}</div>
+          </div>
         </div>
       )}
       <div className="footer">

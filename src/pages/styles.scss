@@ -122,7 +122,7 @@ a{
   }
   
   .main-des-title-6-test{
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2.5rem;
     // font-weight: 600;
     padding: 1rem 0;
@@ -180,6 +180,12 @@ a{
 
   .quiz-5{
     font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .quiz-5-test{
+    font-size: 1.999rem;
     line-height: 2.25rem;
     font-weight: 700;
     color: #1f2937;
@@ -298,7 +304,7 @@ a{
   .checking{
     text-align: center;
     padding: 1.5rem;
-    background-color: rgb(209 213 219);
+    background-color:#e9f2ff;
     border-top: 2px solid rgb(59 130 246);
     margin: 1rem;
     max-width: 48rem;
