@@ -20,7 +20,7 @@ import VeryNew from './pages/10'
 import Visits from "./pages/visits";
 
 function App() {
-  
+  console.log('test');
   return (
     <Router>
       <div className="App">
