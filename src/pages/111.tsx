@@ -223,8 +223,12 @@ export default function Fifth_SP() {
 
   return (
     <div>
-      <div className="top-sticky-blue" id="top">
-      Senior's Flex Program 2023
+      <div className="top-sticky-blue-test" id="top">
+        ss
+        <img
+          src="https://cdn.convertri.com/7562552f-90c0-11ea-abef-0697e5ca793e%2F5c6aafc49fafcf3f661c18dd6c18c3b55c7d3b71%2Flogo-call-vs.svg"
+          alt="Logo"
+        />
       </div>
       {step === "process" ? (
         <>
@@ -246,8 +250,11 @@ export default function Fifth_SP() {
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
                 If you have not yet claimed your monthly allowance then answer
-                the questions below and once approved <b>you will have your $3,600
-                Flex Card mailed to you within a few days ready for use!</b>
+                the questions below and once approved{" "}
+                <b>
+                  you will have your $3,600 Flex Card mailed to you within a few
+                  days ready for use!
+                </b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -280,7 +287,7 @@ export default function Fifth_SP() {
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
           <a href="tel:+18446720874">
             <div className="call-btn" onClick={handleCall}>
-            CALL (844) 672-0874
+              CALL (844) 672-0874
             </div>
           </a>
           <div className="sub-title">We Have Reserved Your Spot</div>
