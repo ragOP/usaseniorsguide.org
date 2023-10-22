@@ -218,6 +218,40 @@ a{
     width: 100%;
     cursor: pointer;
   }
+  .answer-btn-5-test{
+    color: white;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    padding: 0.75rem;
+    background-color: rgb(18, 112, 255);
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .ok{
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 50px;
+    width: 100%;
+    background-color: rgb(18, 112, 255);
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 30px;
+    margin: auto;
+    padding: 14px 36px 14px 14px;
+  
+  }
   
   .answer-btn:hover{
     background-color: rgb(34, 155, 78);

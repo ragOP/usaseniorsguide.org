@@ -222,7 +222,7 @@ export default function Fifth_SP() {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "rgb(233, 242, 255)" }}>
       <div className="top-sticky-blue-test" id="top">
         ss
         <img
@@ -236,8 +236,11 @@ export default function Fifth_SP() {
             <div className="main-descrition-5">
               <div className="main-des-title-6">
                 <b>
-                  Americans Over 60 Can Now Qualify For The $3600 FLEX Card In
-                  2023. Here's How!
+                  Americans Over 60 Can Now Qualify For{" "}
+                  <span style={{ color: "rgb(0, 74, 155)" }}>
+                    The $3600 FLEX Card
+                  </span>{" "}
+                  In 2023. Here's How!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
@@ -263,10 +266,10 @@ export default function Fifth_SP() {
                 {quiz}
               </div>
               <div className="answer">
-                <div className="answer-btn-5" onClick={handleQuizP}>
+                <div className="ok" onClick={handleQuizP}>
                   Yes
                 </div>
-                <div className="answer-btn-5" onClick={handleQuizN}>
+                <div className="ok" onClick={handleQuizN}>
                   No
                 </div>
               </div>
@@ -286,7 +289,7 @@ export default function Fifth_SP() {
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
           <a href="tel:+18446720874">
-            <div className="call-btn" onClick={handleCall}>
+            <div className="ok" onClick={handleCall}>
               CALL (844) 672-0874
             </div>
           </a>
