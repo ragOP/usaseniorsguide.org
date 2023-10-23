@@ -7,6 +7,8 @@ import "./styles.scss";
 import { scrollTo } from "../utils";
 
 import Head_bg from "../assets/hero5.png";
+import Yes from "../assets/1.svg";
+import No from "../assets/2.svg";
 import Headline from "../assets/headline_spandeb1.png";
 import { useNavigate } from "react-router-dom";
 
@@ -92,7 +94,6 @@ export default function Fifth_SP() {
     });
 
     // Redirect to the specified URL
-
   };
 
   const [quiz, setQuiz] = useState("Are you over the age of 60?  ");
@@ -113,11 +114,10 @@ export default function Fifth_SP() {
       }, 1500);
     }
     if (step === "3 Licensed Agents Available ✅️") {
-        setTimeout(() => {
-          setStep("Redirecting You Now...");
-        }, 1500);
-      }
-
+      setTimeout(() => {
+        setStep("Redirecting You Now...");
+      }, 1500);
+    }
 
     if (step === "Redirecting You Now...") {
       setTimeout(() => {
@@ -146,7 +146,7 @@ export default function Fifth_SP() {
               )
               .catch((err) => console.log(err));
           });
-      }, 1500);
+      }, 500);
     }
 
     if (step === "completed") {
@@ -157,7 +157,7 @@ export default function Fifth_SP() {
         setMin(
           Math.floor((180 - Math.round((nowTime - startTime) / 1000)) / 60)
         );
-      }, 1000);
+      }, 100);
     }
   };
 
@@ -235,7 +235,8 @@ export default function Fifth_SP() {
   useEffect(() => {
     if (step === "completed") {
       // Redirect to the specified URL when step is "completed"
-      window.location.href = "https://policynational.com/call-vs/?c=21420&source={{value}}&pcid={{value}}";
+      window.location.href =
+        "https://policynational.com/call-vs/?c=21420&source={{value}}&pcid={{value}}";
     }
   }, [step]);
   return (
@@ -245,6 +246,11 @@ export default function Fifth_SP() {
         <img
           src="https://cdn.convertri.com/7562552f-90c0-11ea-abef-0697e5ca793e%2F5c6aafc49fafcf3f661c18dd6c18c3b55c7d3b71%2Flogo-call-vs.svg"
           alt="Logo"
+          style={{
+            width: "150px",
+            // Reduce the width by 10%
+            height: "50%", // Reduce the height by 10%
+          }}
         />
       </div>
       {step === "process" ? (
@@ -281,11 +287,34 @@ export default function Fifth_SP() {
                 {quiz}
               </div>
               <div className="answer">
-                <div className="ok" onClick={handleQuizP}>
-                  Yes
+                <div
+                  className="ok-test"
+                  onClick={handleQuizP}
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <img
+                    src={Yes}
+                    alt="Yes Icon"
+                    style={{
+                      width: "80px", // Set the width of the image
+                      height: "60px", // Set the height of the image
+                      marginRight: "10px", // Set the margin to the right
+                    }}
+                  />
+                  <span style={{ flexGrow: 1, textAlign: "center",marginRight:"100px", }}>Yes</span>{" "}
+                  {/* Centered text */}
                 </div>
-                <div className="ok" onClick={handleQuizN}>
-                  No
+                <div className="ok-test" onClick={handleQuizN}>
+                  <img
+                    src={No}
+                    alt="Yes Icon"
+                    style={{
+                      width: "80px", // Set the width of the image
+                      height: "60px", // Set the height of the image
+                      marginRight: "10px", // Set the margin to the right
+                    }}
+                  />
+                            <span style={{ flexGrow: 1,marginRight:"100px", textAlign: "center" }}>No</span>{" "}
                 </div>
               </div>
             </div>
@@ -296,9 +325,7 @@ export default function Fifth_SP() {
           {step}
         </div>
       ) : (
-        <div className="checking">
-   
-        </div>
+        <div className="checking"></div>
       )}
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
