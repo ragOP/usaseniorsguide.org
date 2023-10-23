@@ -247,7 +247,7 @@ export default function Fifth_SP() {
           src="https://cdn.convertri.com/7562552f-90c0-11ea-abef-0697e5ca793e%2F5c6aafc49fafcf3f661c18dd6c18c3b55c7d3b71%2Flogo-call-vs.svg"
           alt="Logo"
           style={{
-            width: "150px",
+            width: "170px",
             // Reduce the width by 10%
             height: "50%", // Reduce the height by 10%
           }}
