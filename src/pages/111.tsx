@@ -105,10 +105,10 @@ export default function Fifth_SP() {
   const stepProcess = () => {
     if (step === "Checking Your Eligibility...") {
       setTimeout(() => {
-        setStep("You're Eligible ✅️...");
+        setStep("You're Eligible ✅️");
       }, 1500);
     }
-    if (step === "You're Eligible ✅️...") {
+    if (step === "You're Eligible ✅️") {
       setTimeout(() => {
         setStep("3 Licensed Agents Available ✅️");
       }, 1500);
