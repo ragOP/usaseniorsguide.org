@@ -230,16 +230,16 @@ export default function Fifth_SP() {
         <>
           <div className="main-container-5">
             <div className="main-descrition-5">
-              <div className="main-des-title-6">
+              <div className="main-des-title-6-2">
                 <b>
-                  Americans Over 60 Can Now Qualify For The $2400 Allowance  Card In
+                  Americans Over 60 Can Now Qualify For The $2400 Allowance Card In
                   2023. Here's How!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bg} alt="head" />
               <div className="main-des-5">
-                Americans over 60 years old can claim the 2023 Allowance  Spending
+                Americans over 60 years old can claim the 2023 Allowance Spending
                 Card that gives them up to $2400. Americans can use the funds to
                 fully cover the cost of their monthly expenses such as
                 Groceries, Rent, Bills and any other expenses they may have!
