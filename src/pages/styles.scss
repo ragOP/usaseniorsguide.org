@@ -29,9 +29,26 @@ a{
     font-weight: 800;
     text-align: left;
   }
-  .top-sticky-blue-test {
+  .top-sticky-blue-test2 {
     padding: 0.75rem 16rem;
     background-color: rgb(30 58 138);
+    color: white;
+    height: 80px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.28);
+}
+  
+  .top-sticky-blue-test {
+    margin-left: -10px;
+    padding: 0.75rem 16rem;
+    background-color: rgb(255, 255, 255);
     color: white;
     height: 80px;
     font-size: 1rem;

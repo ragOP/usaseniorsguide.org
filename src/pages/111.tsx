@@ -242,7 +242,7 @@ export default function Fifth_SP() {
   return (
     <div style={{ backgroundColor: "rgb(233, 242, 255)" }}>
       <div className="top-sticky-blue-test" id="top">
-        ss
+     
         <img
           src="https://cdn.convertri.com/7562552f-90c0-11ea-abef-0697e5ca793e%2F5c6aafc49fafcf3f661c18dd6c18c3b55c7d3b71%2Flogo-call-vs.svg"
           alt="Logo"
