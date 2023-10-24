@@ -223,7 +223,7 @@ export default function Fifth_SP() {
 
   return (
     <div>
-      <div className="top-sticky-blue" id="top">
+      <div className="top-sticky-blue-test" id="top">
       Senior's Flex Program 2023
       </div>
       {step === "process" ? (
@@ -232,7 +232,7 @@ export default function Fifth_SP() {
             <div className="main-descrition-5">
               <div className="main-des-title-6">
                 <b>
-                  Americans Over 60 Can Now Qualify For The $3600 FLEX Card In
+                  Americans Over 60 Can Now Qualify For The $2400 FLEX Card In
                   2023. Here's How!
                 </b>
               </div>
@@ -240,13 +240,13 @@ export default function Fifth_SP() {
               <img className="topic-img-middle" src={Head_bg} alt="head" />
               <div className="main-des-5">
                 Americans over 60 years old can claim the 2023 Flex Spending
-                Card that gives them up to $3600. Americans can use the funds to
+                Card that gives them up to $2400. Americans can use the funds to
                 fully cover the cost of their monthly expenses such as
                 Groceries, Rent, Bills and any other expenses they may have!
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
                 If you have not yet claimed your monthly allowance then answer
-                the questions below and once approved <b>you will have your $3,600
+                the questions below and once approved <b>you will have your $2,400
                 Flex Card mailed to you within a few days ready for use!</b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
@@ -274,7 +274,7 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulation, You Qualify!</div>
           <div className="top-description-5">
-            Make A <b>Quick Call</b> To Claim Your Flex Card!
+            Make A <b>Quick Call</b> To Claim Your Allowance Card!
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
