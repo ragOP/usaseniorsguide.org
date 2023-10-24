@@ -32,17 +32,17 @@ a{
   .top-sticky-blue-test2 {
     padding: 0.75rem 16rem;
     background-color: rgb(30 58 138);
-    color: white;
-    height: 80px;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 800;
     text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    
-    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.28);
+
+}
+@media (max-width: 768px) {
+  .top-sticky-blue-test2 {
+    text-align: center; /* Center-align the text */
+    padding: 0.75rem 1rem; /* Adjust padding for smaller screens */
+  }
 }
   
   .top-sticky-blue-test {
