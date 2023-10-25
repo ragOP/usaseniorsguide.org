@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useState, useEffect } from "react";
 //@ts-ignore
 import TagManager from "react-gtm-module";
@@ -11,6 +12,7 @@ import Yes from "../assets/1.svg";
 import No from "../assets/2.svg";
 import Headline from "../assets/headline_spandeb1.png";
 import { useNavigate } from "react-router-dom";
+import { ThreeDots } from "react-loader-spinner";
 
 // google tag manager
 
@@ -101,6 +103,7 @@ export default function Fifth_SP() {
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const stepProcess = () => {
     if (step === "Checking Your Eligibility...") {
@@ -116,6 +119,7 @@ export default function Fifth_SP() {
     if (step === "3 Licensed Agents Available ✅️") {
       setTimeout(() => {
         setStep("Redirecting You Now...");
+        setIsLoading(true);
       }, 1500);
     }
 
@@ -240,99 +244,149 @@ export default function Fifth_SP() {
     }
   }, [step]);
   return (
-    <div style={{ backgroundColor: "rgb(233, 242, 255)" }}>
-      <div className="top-sticky-blue-test" id="top">
-     
-        <img
-          src="https://cdn.convertri.com/7562552f-90c0-11ea-abef-0697e5ca793e%2F5c6aafc49fafcf3f661c18dd6c18c3b55c7d3b71%2Flogo-call-vs.svg"
-          alt="Logo"
-          style={{
-            width: "170px",
-            // Reduce the width by 10%
-            height: "50%", // Reduce the height by 10%
-          }}
-        />
-      </div>
-      {step === "process" ? (
-        <>
-          <div className="main-container-5">
-            <div className="main-descrition-5">
-              <div className="main-des-title-6-test">
-                <b>
-                  Americans Over 60 Can Now Qualify For{" "}
-                  <span style={{ color: "rgb(0, 74, 155)" }}>
-                    The $3600 FLEX Card
-                  </span>{" "}
-                  In 2023. Here's How!
-                </b>
-              </div>
-              <img  style={{marginTop:'10px'}}className="topic-img-middle" src={Head_bg} alt="head" />
-              <div className="main-des-5">
-                Americans over 60 years old can claim the 2023 Flex Spending
-                Card that gives them up to $3600. Americans can use the funds to
-                fully cover the cost of their monthly expenses such as
-                Groceries, Rent, Bills and any other expenses they may have!
-              </div>
-              <div className="main-des-5" style={{ marginTop: "1rem" }}>
-                If you have not yet claimed your monthly allowance then answer
-                the questions below and once approved{" "}
-                <b>
-                  you will have your $3,600 Flex Card mailed to you within a few
-                  days ready for use!
-                </b>
-              </div>
+    <>
+      {isLoading ? (
+        <div style={{ marginTop: "50px", marginLeft: "100px" }}>
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color="red"
+            ariaLabel="three-dots-loading"
+            visible={true}
+          />
+        </div>
+      ) : (
+        <div>
+          <div style={{ backgroundColor: "rgb(233, 242, 255)" }}>
+            <div className="top-sticky-blue-test" id="top">
+              <img
+                src="https://cdn.convertri.com/7562552f-90c0-11ea-abef-0697e5ca793e%2F5c6aafc49fafcf3f661c18dd6c18c3b55c7d3b71%2Flogo-call-vs.svg"
+                alt="Logo"
+                style={{
+                  width: "170px",
+                  // Reduce the width by 10%
+                  height: "50%", // Reduce the height by 10%
+                }}
+              />
             </div>
-            <div className="survey">
-              <div className="quiz-5-test" id="btn">
-                {quiz}
+            {step === "process" ? (
+              <>
+                <div className="main-container-5">
+                  <div className="main-descrition-5">
+                    <div className="main-des-title-6-test">
+                      <b>
+                        Americans Over 60 Can Now Qualify For{" "}
+                        <span style={{ color: "rgb(0, 74, 155)" }}>
+                          The $3600 FLEX Card
+                        </span>{" "}
+                        In 2023. Here's How!
+                      </b>
+                    </div>
+                    <img
+                      style={{ marginTop: "10px" }}
+                      className="topic-img-middle"
+                      src={Head_bg}
+                      alt="head"
+                    />
+                    <div className="main-des-5">
+                      Americans over 60 years old can claim the 2023 Flex
+                      Spending Card that gives them up to $3600. Americans can
+                      use the funds to fully cover the cost of their monthly
+                      expenses such as Groceries, Rent, Bills and any other
+                      expenses they may have!
+                    </div>
+                    <div className="main-des-5" style={{ marginTop: "1rem" }}>
+                      If you have not yet claimed your monthly allowance then
+                      answer the questions below and once approved{" "}
+                      <b>
+                        you will have your $3,600 Flex Card mailed to you within
+                        a few days ready for use!
+                      </b>
+                    </div>
+                  </div>
+                  <div className="survey">
+                    <div className="quiz-5-test" id="btn">
+                      {quiz}
+                    </div>
+                    <div className="answer">
+                      <div
+                        className="ok-test"
+                        onClick={handleQuizP}
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
+                        <img
+                          src={Yes}
+                          alt="Yes Icon"
+                          style={{
+                            width: "80px", // Set the width of the image
+                            height: "60px", // Set the height of the image
+                            marginRight: "10px", // Set the margin to the right
+                          }}
+                        />
+                        <span
+                          style={{
+                            flexGrow: 1,
+                            textAlign: "center",
+                            marginRight: "100px",
+                          }}
+                        >
+                          Yes
+                        </span>{" "}
+                        {/* Centered text */}
+                      </div>
+                      <div className="ok-test" onClick={handleQuizN}>
+                        <img
+                          src={No}
+                          alt="Yes Icon"
+                          style={{
+                            width: "80px", // Set the width of the image
+                            height: "60px", // Set the height of the image
+                            marginRight: "10px", // Set the margin to the right
+                          }}
+                        />
+                        <span
+                          style={{
+                            flexGrow: 1,
+                            marginRight: "100px",
+                            textAlign: "center",
+                          }}
+                        >
+                          No
+                        </span>{" "}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : step !== "process" && step !== "completed" ? (
+              <div className="checking" style={{ fontWeight: "700" }}>
+                {isLoading ? (
+                  <ThreeDots
+                    height="80"
+                    width="80"
+                    radius="9"
+                    color="red"
+                    ariaLabel="three-dots-loading"
+                    wrapperStyle={{}}
+                    visible={true}
+                  />
+                ) : (
+                  step
+                )}
               </div>
-              <div className="answer">
-                <div
-                  className="ok-test"
-                  onClick={handleQuizP}
-                  style={{ display: "flex", alignItems: "center" }}
-                >
-                  <img
-                    src={Yes}
-                    alt="Yes Icon"
-                    style={{
-                      width: "80px", // Set the width of the image
-                      height: "60px", // Set the height of the image
-                      marginRight: "10px", // Set the margin to the right
-                    }}
-                  />
-                  <span style={{ flexGrow: 1, textAlign: "center",marginRight:"100px", }}>Yes</span>{" "}
-                  {/* Centered text */}
-                </div>
-                <div className="ok-test" onClick={handleQuizN}>
-                  <img
-                    src={No}
-                    alt="Yes Icon"
-                    style={{
-                      width: "80px", // Set the width of the image
-                      height: "60px", // Set the height of the image
-                      marginRight: "10px", // Set the margin to the right
-                    }}
-                  />
-                            <span style={{ flexGrow: 1,marginRight:"100px", textAlign: "center" }}>No</span>{" "}
-                </div>
+            ) : (
+              <div className="checking"></div>
+            )}
+            <div className="footer">
+              <div className="terms">Terms & Conditions | Privacy Policy</div>
+              <div className="copyright">
+                Copyright © 2022 - All right reserved Daily America Savings.
               </div>
             </div>
           </div>
-        </>
-      ) : step !== "process" && step !== "completed" ? (
-        <div className="checking" style={{ fontWeight: "700" }}>
-          {step}
         </div>
-      ) : (
-        <div className="checking"></div>
       )}
-      <div className="footer">
-        <div className="terms">Terms & Conditions | Privacy Policy</div>
-        <div className="copyright">
-          Copyright © 2022 - All right reserved Daily America Savings.
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
