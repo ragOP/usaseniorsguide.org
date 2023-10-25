@@ -106,24 +106,24 @@ export default function Fifth_SP() {
   const [isLoading, setIsLoading] = useState(false);
 
   const stepProcess = () => {
-    if (step === "Checking Your Eligibility...") {
+    if (step === "1.Checking Your Eligibility...") {
       setTimeout(() => {
-        setStep("You're Eligible ✅️");
+        setStep("2.You're Eligible ✅️");
       }, 1500);
     }
-    if (step === "You're Eligible ✅️") {
+    if (step === "2.You're Eligible ✅️") {
       setTimeout(() => {
-        setStep("3 Licensed Agents Available ✅️");
+        setStep("3.3 Licensed Agents Available ✅️");
       }, 1500);
     }
-    if (step === "3 Licensed Agents Available ✅️") {
+    if (step === "3.3 Licensed Agents Available ✅️") {
       setTimeout(() => {
-        setStep("Redirecting You Now...");
+        setStep("4.Redirecting You Now...");
         setIsLoading(true);
       }, 1500);
     }
 
-    if (step === "Redirecting You Now...") {
+    if (step === "4.Redirecting You Now...") {
       setTimeout(() => {
         setStep("completed");
 
@@ -178,7 +178,7 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setQuiz("2. Do you live in the United States?");
     } else {
-      setStep("Checking Your Eligibility...");
+      setStep("1.Checking Your Eligibility...");
       topScroll("top");
     }
 
@@ -210,7 +210,7 @@ export default function Fifth_SP() {
     if (quiz === "Are you over the age of 60?  ") {
       setQuiz("2. Do you live in the United States?");
     } else {
-      setStep("Checking Your Eligibility...");
+      setStep("1.Checking Your Eligibility...");
       topScroll("top");
     }
 
@@ -243,15 +243,17 @@ export default function Fifth_SP() {
         "https://policynational.com/call-vs/?c=21420&source={{value}}&pcid={{value}}";
     }
   }, [step]);
+
   return (
     <>
       {isLoading ? (
-        <div style={{ marginTop: "50px", marginLeft: "100px" }}>
+        <div >
           <ThreeDots
             height="80"
             width="80"
+            wrapperClass="center-loader"
             radius="9"
-            color="red"
+            color="blue"
             ariaLabel="three-dots-loading"
             visible={true}
           />
