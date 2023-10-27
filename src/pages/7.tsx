@@ -249,7 +249,7 @@ export default function Fifth_SP() {
               <div className="quiz-5" id="btn">
                 {quiz}
               </div>
-              <div style={{marginTop:'-0px'}} className="answer">
+              <div  className="answer">
                 <div className="answer-btn-5" onClick={handleQuizP}>
                 YES, I'M 65 OR OLDER
                 </div>
