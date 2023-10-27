@@ -254,7 +254,7 @@ export default function Fifth_SP() {
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
-            <div style={{marginTop:'-12px'}} className="survey">
+            <div style={{marginTop:'-5px'}} className="survey">
               <div className="quiz-5" id="btn">
                 {quiz}
               </div>
