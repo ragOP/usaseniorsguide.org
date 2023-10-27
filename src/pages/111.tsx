@@ -286,19 +286,19 @@ export default function Fifth_SP() {
                       </b>
                     </div>
                     <img
-                      style={{ marginTop: "10px" }}
-                      className="topic-img-middle"
+                     
+                      className="topic-img-middle-test"
                       src={Head_bg}
                       alt="head"
                     />
-                    <div className="main-des-5">
+                    <div style={{ marginTop: '-2px' }} className="main-des-5">
                       Americans over 60 years old can claim the 2023 Flex
                       Spending Card that gives them up to $3600. Americans can
                       use the funds to fully cover the cost of their monthly
                       expenses such as Groceries, Rent, Bills and any other
                       expenses they may have!
                     </div>
-                    <div className="main-des-5" style={{ marginTop: "1rem" }}>
+                    <div className="main-des-5" style={{ marginTop: '-10px' }}>
                       If you have not yet claimed your monthly allowance then
                       answer the questions below and once approved{" "}
                       <b>

@@ -156,6 +156,11 @@ a{
     margin-left: 15%;
     margin-top: -18px;
   }
+  .topic-img-middle-test{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5px;
+  }
 
   .main-des-title{
     font-size: 1.875rem;
@@ -206,6 +211,13 @@ a{
     color: #1f2937;
   }
 
+  @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .main-des-title-6-test {
+    // margin-top: -0.1rem;
+      font-size: 1.5rem; /* Reduce the font size for smaller screens */
+      line-height: 1.2; /* Adjust the line height as needed */
+    }
+  }
   .main-des-title-smaller{
     font-size: 2rem;
     line-height: 2.5rem;
