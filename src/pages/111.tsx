@@ -291,7 +291,7 @@ export default function Fifth_SP() {
                       src={Head_bg}
                       alt="head"
                     />
-                    <div style={{ marginTop: '-2px' }} className="main-des-5">
+                    <div style={{ marginTop: '10px' }} className="main-des-5">
                       Americans over 60 years old can claim the 2023 Flex
                       Spending Card that gives them up to $3600. Americans can
                       use the funds to fully cover the cost of their monthly
@@ -307,7 +307,7 @@ export default function Fifth_SP() {
                       </b>
                     </div>
                   </div>
-                  <div style={{marginTop:"-17px"}} className="survey">
+                  <div style={{marginTop:"-8px"}} className="survey">
                     <div className="quiz-5-test" id="btn">
                       {quiz}
                     </div>
