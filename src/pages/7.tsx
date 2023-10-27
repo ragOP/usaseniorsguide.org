@@ -251,10 +251,10 @@ export default function Fifth_SP() {
               </div>
               <div  className="answer">
                 <div className="answer-btn-5" onClick={handleQuizP}>
-                YES, I'M 65 OR OLDER
+                YES
                 </div>
                 <div className="answer-btn-5" onClick={handleQuizN}>
-                NO, I'M 64 OR YOUNGER
+                NO
                 </div>
               </div>
             </div>
