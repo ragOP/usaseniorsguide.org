@@ -91,7 +91,7 @@ export default function Fifth_SP() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Are you over the age of 60?  ");
+  const [quiz, setQuiz] = useState("Are you over the age of 64?  ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
@@ -162,7 +162,7 @@ export default function Fifth_SP() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Are you over the age of 60?  ") {
+    if (quiz === "Are you over the age of 64?  ") {
       setYes("Yes")
       setNo("No")
       setQuiz("2. Do you live in the United States?");
