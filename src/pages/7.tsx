@@ -237,7 +237,7 @@ export default function Fifth_SP() {
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
-              <div  style={{marginTop:'8px'}}className="main-des-5">
+              <div  style={{marginTop:'10px'}}className="main-des-5">
               Americans over 64 years old can claim the 2023 Flexible Spending Card that gives them up to $3600. Americans can use the funds to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have! 
               </div>
               <div className="main-des-5"  style={{marginTop:'-15px'}}>
