@@ -307,7 +307,7 @@ export default function Fifth_SP() {
                       </b>
                     </div>
                   </div>
-                  <div style={{marginTop:"17px"}} className="survey">
+                  <div style={{marginTop:"-17px"}} className="survey">
                     <div className="quiz-5-test" id="btn">
                       {quiz}
                     </div>
