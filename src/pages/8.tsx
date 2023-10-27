@@ -225,7 +225,7 @@ export default function Fifth_SP() {
 
   return (
     <div>
-      <div className="top-sticky-blue" id="top">
+      <div className="top-sticky-blue-xy" id="top">
       Senior's Allowance Programs 2023
       </div>
       {step === "process" ? (
@@ -236,22 +236,16 @@ export default function Fifth_SP() {
                 				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
                   Americans Over 60 Can Now Qualify For The<span style={{backgroundColor:"#fde047"}}> $800 Grocery
-                  Allowance + $1,200 Visa Spend Card.</span> Here's How!
+                  Allowance + $1,200 Visa Card.</span> Here's How!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-                Americans over 60 years old can claim the $800 Grocery Allowance
-                AND the $1,200 Visa Spending Card. These funds can be used to
-                fully cover the cost of their monthly expenses such as
-                Groceries, Rent, Bills and any other expenses they may have!
+              Americans over 60 years old can claim the $1,200 Visa Spending Card. These funds can be used to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have!
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-                If you have not yet claimed your Grocery Card with the Visa
-                monthly allowance then answer the questions below and once
-                approved <b>you will have your $800 Grocery Card + $1,200 Visa Card
-                mailed to you within a few days, ready for use!</b>
+              If you have not yet claimed Visa monthly allowance then answer the questions below and <b>once approved $1,200 Visa Card mailed to you within a few days, ready for use!</b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -278,7 +272,7 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulation, You Qualify!</div>
           <div className="top-description-5">
-            Make A <b>Quick Call</b>  To Claim Your $800 Grocery Card AND $1,200 Visa Spending Allowance!
+            <b>Make A Quick Call To Claim Your $1,200 Visa Spending Allowance!</b>
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
