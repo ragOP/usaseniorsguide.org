@@ -124,6 +124,10 @@ a{
     // padding: 0.5rem 1rem;
     text-align: center;
   }
+  .main-descrition-5-5{
+
+    text-align: center;
+  }
   
   .topic-img{
     width: 80%;
@@ -146,6 +150,11 @@ a{
     width: 90%;
     margin-left: 5%;
     margin-top: 0.5rem;
+  }
+  .topic-img-middle-z{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -18px;
   }
 
   .main-des-title{
@@ -170,7 +179,23 @@ a{
     padding: 1rem 0;
     color: #1f2937;
   }
+  .main-des-title-6-7{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.7rem;
+    
+    font-weight: 900;
+    padding: 1rem 0;
+    color: #1f2937;
+    margin-top: -25px;
+  }
   
+  @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .main-des-title-6-7 {
+    // margin-top: -0.1rem;
+      font-size: 1.5rem; /* Reduce the font size for smaller screens */
+      line-height: 1.2; /* Adjust the line height as needed */
+    }
+  }
   .main-des-title-6-test{
     font-size: 1.9rem;
     line-height: 50px;
@@ -208,6 +233,15 @@ a{
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 1rem 0;
+    text-align: left;
+    color: #1f2937;
+  }
+  .main-des-5-t{
+    
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+    margin-top: -3px;
     text-align: left;
     color: #1f2937;
   }
