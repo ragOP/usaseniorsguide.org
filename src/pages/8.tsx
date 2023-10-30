@@ -235,17 +235,16 @@ export default function Fifth_SP() {
               <div className="main-des-title-6">
                 				{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
-                  Americans Over 60 Can Now Qualify For The<span style={{backgroundColor:"#fde047"}}> $800 Grocery
-                  Allowance + $1,200 Visa Card.</span> Here's How!
+                Americans Over 60 Can Now Qualify For The<span style={{backgroundColor:"#fde047"}}> $3000 Allowance Card in 2023!</span>
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle" src={Head_bgs} alt="head" />
               <div className="main-des-5">
-              Americans over 60 years old can claim the $1,200 Visa Spending Card. These funds can be used to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have!
+              Americans over 60 years old can claim the 2023 Spending Allowance Card that gives them up to $3000. Americans can use the funds to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have!
               </div>
               <div className="main-des-5" style={{ marginTop: "1rem" }}>
-              If you have not yet claimed Visa monthly allowance then answer the questions below and <b>once approved $1,200 Visa Card mailed to you within a few days, ready for use!</b>
+              If you have not yet claimed your monthly allowance then answer the questions below and once approved you will have your $3,600 Spending Allowance Card mailed to you within a few days ready for use!
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
@@ -272,13 +271,13 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulation, You Qualify!</div>
           <div className="top-description-5">
-            <b>Make A Quick Call To Claim Your $1,200 Visa Spending Allowance!</b>
+            <b>Make A Quick Call To Claim Your $3000 Spending Allowance!</b>
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18446720874">
+          <a href="tel:+18556761669">
             <div className="call-btn" onClick={handleCall}>
-            CALL (844) 672-0874
+            CALL (855) 676-1669
             </div>
           </a>
           <div className="sub-title">We Have Reserved Your Spot</div>
