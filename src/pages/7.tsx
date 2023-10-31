@@ -241,7 +241,7 @@ export default function Fifth_SP() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-                Americans Over 64 Can Now Qualify For The $1200 Visa Card in 2023. Here's How!
+                Americans Over 64 Can Now Qualify For The $3600 Flex Card in 2023. Here's How!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
