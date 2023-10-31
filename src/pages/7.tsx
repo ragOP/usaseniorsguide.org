@@ -249,7 +249,7 @@ export default function Fifth_SP() {
               <div  style={{marginTop:'14px'}}className="main-des-5">
               Americans over 64 years old can claim the 2023 Flexible Spending Card that gives them up to $3600. Americans can use the funds to fully cover the cost of their monthly expenses such as Groceries, Rent, Bills and any other expenses they may have! 
               </div>
-              <div className="main-des-5"  style={{marginTop:'-15px'}}>
+              <div className="main-des-5"  style={{marginTop:'-5px'}}>
               If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $3,600 Flex Card mailed to you within a few days ready for use!</b>
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
