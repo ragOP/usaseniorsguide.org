@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import TagManager from "react-gtm-module";
 import axios from "axios";
 import "./styles.scss";
+import Yes from "../assets/1.svg";
+import No from "../assets/2.svg";
 
 import { scrollTo } from "../utils";
 
@@ -286,14 +288,53 @@ export default function Fifth_SP() {
               <div className="quiz-5" id="btn">
                 {quiz}
               </div>
-              <div className="answer">
-                <div className="ok" onClick={handleQuizP}>
-                  Yes
-                </div>
-                <div className="ok" onClick={handleQuizN}>
-                  No
-                </div>
-              </div>
+              <div   className="answer">
+                      <div
+                        className="ok-test"
+                        onClick={handleQuizP}
+                        style={{ display: "flex", alignItems: "center" }}
+                      >
+                        <img
+                          src={Yes}
+                          alt="Yes Icon"
+                          style={{
+                            width: "80px", // Set the width of the image
+                            height: "60px", // Set the height of the image
+                            marginRight: "10px", // Set the margin to the right
+                          }}
+                        />
+                        <span
+                          style={{
+                            flexGrow: 1,
+                            textAlign: "center",
+                            marginRight: "100px",
+                          }}
+                        >
+                          Yes
+                        </span>{" "}
+                        {/* Centered text */}
+                      </div>
+                      <div className="ok-test" onClick={handleQuizN}>
+                        <img
+                          src={No}
+                          alt="Yes Icon"
+                          style={{
+                            width: "80px", // Set the width of the image
+                            height: "60px", // Set the height of the image
+                            marginRight: "10px", // Set the margin to the right
+                          }}
+                        />
+                        <span
+                          style={{
+                            flexGrow: 1,
+                            marginRight: "100px",
+                            textAlign: "center",
+                          }}
+                        >
+                          No
+                        </span>{" "}
+                      </div>
+                    </div>
             </div>
           </div>
         </>
@@ -316,7 +357,7 @@ export default function Fifth_SP() {
               style={{
                 aspectRatio: "1/16",
                 width: "100%",
-                height:'440px'
+                height:'400px'
                
               }}
             ></iframe>
