@@ -223,7 +223,7 @@ export default function Fifth_SP() {
 
   return (
     <div>
-      <div className="top-sticky-blue" id="top">
+      <div className="top-sticky-blue-test2" id="top">
       Senior's Allowance  Program 2023
       </div>
       {step === "process" ? (
