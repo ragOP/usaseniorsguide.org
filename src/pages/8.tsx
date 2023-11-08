@@ -231,7 +231,7 @@ export default function Fifth_SP() {
         <>
           <div className="main-container-5">
             <div className="main-descrition-5">
-              <div className="main-des-title-6">
+              <div className="main-des-title-60a">
                 {/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
                 <b>
                   Americans Over 65 Can Now Qualify For The
