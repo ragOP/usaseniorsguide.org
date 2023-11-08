@@ -279,7 +279,7 @@ export default function Fifth_SP() {
         <div className="checking">
           <div className="congrats">Congratulation, You Qualify!</div>
           <div className="top-description-5">
-            <b>Make A Quick Call To Claim Your $3600 Grocery Allowance!</b>
+            <b>Make A Quick Call To Claim Your Grocery Allowance!</b>
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
