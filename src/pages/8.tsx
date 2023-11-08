@@ -237,7 +237,7 @@ export default function Fifth_SP() {
                   Americans Over 65 Can Now Qualify For The
                   <span style={{ backgroundColor: "#fde047" }}>
                     {" "}
-                    $3600 Grocery Card in 2023!
+                    $3600 Grocery Allownace Card in 2023!
                   </span>
                 </b>
               </div>
