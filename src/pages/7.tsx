@@ -19,7 +19,7 @@ TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
   useEffect(() => {
-    window.document.title = "Senior's Flex  Program 2023";
+    window.document.title = "Senior's Allowance Program 2023";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
