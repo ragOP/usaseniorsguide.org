@@ -283,9 +283,9 @@ export default function Fifth_SP() {
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18556761669">
+          <a href="tel:+18556720700">
             <div className="call-btn" onClick={handleCall}>
-              CALL (855) 676-1669
+            CALL (855) 672-0700
             </div>
           </a>
           <div className="sub-title">We Have Reserved Your Spot</div>
