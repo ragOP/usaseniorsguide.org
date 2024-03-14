@@ -20,6 +20,7 @@ import VeryNew from './pages/10'
 import Visits from "./pages/visits";
 import Test from './pages/111';
 import Client from './pages/Client'
+import Newx from './pages/Newx'
 
 function App() {
  
@@ -34,6 +35,7 @@ function App() {
           <Route path = "/spanaca2" element = {<Second_SP />} />
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
              <Route path = "/engmed1" element = {<S />} />
+             <Route path = "/engmed2" element = {<Newx />} />
              <Route path = "/km-engmed1" element = {<VeryNew />} /> 
              <Route path = "/km-engmedgroc1" element = {<Urgent/>} />
           <Route path = "/engmedgroc1" element = {<New/>}/>
