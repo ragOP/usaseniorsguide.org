@@ -18,8 +18,22 @@ const tagManagerArgs = {
 TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
+  const [zipCode, setZipCode] = useState("");
   useEffect(() => {
-    window.document.title = "Senior's Allowance Program 2023";
+    const fetchUserLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/json/");
+        console.log('response',response.data);
+        setZipCode(response.data.postal);
+      } catch (error) {
+        console.error("Error fetching user location:", error);
+      }
+    };
+
+    fetchUserLocation();
+  }, []);
+  useEffect(() => {
+    window.document.title = "Senior's Allowance Program 2024";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
@@ -233,7 +247,7 @@ export default function Fifth_SP() {
   return (
     <div>
       <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
-      Senior's Allowance Program 2023
+      Senior's Allowance Program 2024
       </div>
       {step === "process" ? (
         <>
@@ -302,8 +316,9 @@ CALL (877) 537-0627
       <div className="footer">
         <div className="terms">Terms & Conditions | Privacy Policy</div>
         <div className="copyright">
-          Copyright © 2022 - All right reserved Daily America Savings.
+          Copyright © 2024 - All right reserved Daily America Savings.
         </div>
+        <p>{zipCode} </p>
       </div>
     </div>
   );
