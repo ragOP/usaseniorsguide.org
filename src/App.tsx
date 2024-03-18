@@ -20,6 +20,7 @@ import VeryNew from './pages/10'
 import Visits from "./pages/visits";
 import Test from './pages/111';
 import Client from './pages/Client'
+import Ip from './pages/ip'
 import Newx from './pages/Newx'
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* c */}
-          
+          <Route path = "/ip" element = {<Ip />} />
           <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
