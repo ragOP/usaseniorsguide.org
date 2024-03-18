@@ -19,7 +19,7 @@ TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
   useEffect(() => {
-    window.document.title = "Senior's Allowance Program 2023";
+    window.document.title = "Senior's Allowance Program 2024";
 
     axios
       .get(process.env.REACT_APP_PROXY + `/visits/8`)
@@ -233,7 +233,7 @@ export default function Fifth_SP() {
   return (
     <div>
       <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
-      Senior's Allowance Program 2023
+      Senior's Allowance Program 2024
       </div>
       {step === "process" ? (
         <>
@@ -241,13 +241,13 @@ export default function Fifth_SP() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-                Americans Over 65 Can Now Qualify For The $3600 Grocery Allownace in 2023!
+                Americans Over 65 Can Now Qualify For The $3600 Grocery Allownace in 2024!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-              Americans over 65 years old can claim the 2023 Grocery Allowance Card that gives them up to $3600. Americans can use the funds to fully cover their Groceries, Medicines, etc. at Walmart and thousands of other participating stores!
+              Americans over 65 years old can claim the 2024 Grocery Allowance Card that gives them up to $3600. Americans can use the funds to fully cover their Groceries, Medicines, etc. at Walmart and thousands of other participating stores!
 
               </div>
               <div className="main-des-5"  style={{marginTop:'-5px'}}>
