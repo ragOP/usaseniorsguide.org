@@ -18,6 +18,20 @@ const tagManagerArgs = {
 TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
+  const [zipCode, setZipCode] = useState("");
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/json/");
+        console.log('response',response.data);
+        setZipCode(response.data.postal);
+      } catch (error) {
+        console.error("Error fetching user location:", error);
+      }
+    };
+
+    fetchUserLocation();
+  }, []);
   useEffect(() => {
     window.document.title = "Senior's Allowance Program 2024";
 
@@ -304,6 +318,7 @@ export default function Fifth_SP() {
         <div className="copyright">
           Copyright © 2024 - All right reserved Daily America Savings.
         </div>
+        <p>{zipCode} </p>
       </div>
     </div>
   );
