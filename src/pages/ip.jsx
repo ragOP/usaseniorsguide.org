@@ -25,40 +25,14 @@ export default function Ip() {
   }, []);
 
   useEffect(() => {
-    const fetchUserLocation = () => {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          axios
-            .get(
-              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`
-            )
-            .then((response) => {
-              console.log('response',response.data.address.postcode);
-              setZipCode(response.data.address.postcode);
-              const addressComponents =
-                response.data.results[0].address_components;
-              const zipCodeComponent = addressComponents.find((component) =>
-                component.types.includes("postal_code")
-              );
-              console.log("zipCodeComponent", zipCodeComponent);
-              if (zipCodeComponent) {
-                setZipCode(zipCodeComponent.short_name);
-              } else {
-                console.error(
-                  "Zip code not found in the response:",
-                  response.data
-                );
-              }
-            })
-            .catch((error) => {
-              console.error("Error fetching user location:", error);
-            });
-        },
-        (error) => {
-          console.error("Error getting user location:", error);
-        }
-      );
+    const fetchUserLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/json/");
+        console.log('response',response.data);
+        setZipCode(response.data.postal);
+      } catch (error) {
+        console.error("Error fetching user location:", error);
+      }
     };
 
     fetchUserLocation();
@@ -246,7 +220,7 @@ export default function Ip() {
         <div className="copyright">
           Copyright © 2024 - All right reserved Daily America Savings.
         </div>
-        <p>{zipCode} </p>
+        <p>Test-{zipCode} </p>
       </div>
     </div>
   );
