@@ -5,7 +5,8 @@ import axios from "axios";
 import "./styles.scss";
 
 import { scrollTo } from "../utils";
-
+import { ToastContainer, toast, cssTransition } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Head_bg from "../assets/hero5.png";
 import Headline from "../assets/headline_spandeb1.png";
 
@@ -18,6 +19,85 @@ const tagManagerArgs = {
 TagManager.initialize(tagManagerArgs);
 
 export default function Fifth_SP() {
+
+  const SlideUp = cssTransition({
+    enter: "toast-enter",
+    exit: "toast-exit",
+  });
+  const messages = [
+    "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
+    "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
+    "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
+    "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
+    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
+  ];
+  //   const messages = x.map(message =>  `${message}\n32 sec ago`);
+  const notify = (message: any) => {
+    // Dismiss all existing toasts
+    toast.dismiss();
+    let boldedMessage = message;
+
+    // Make the word "Allowance" bold in all lines
+    boldedMessage = boldedMessage.replace(
+      /Allowance/g,
+      '<strong class="green-bold">Allowance</strong>'
+    );
+    boldedMessage = boldedMessage.replace(
+      /Card/g,
+      '<strong class="green-bold">Card</strong>'
+    );
+
+    // Make specific dollar amounts bold only in specific lines
+    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+    specialAmounts.forEach((amount) => {
+      if (message.includes(amount)) {
+        boldedMessage = boldedMessage.replace(
+          amount,
+          `<strong class="green-bold">${amount}</strong>`
+        );
+      }
+    });
+    // Show new toast
+    toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      closeButton: false,
+    });
+  };
+  useEffect(() => {
+    const delayedEffect = setTimeout(() => {
+      // Create a function to handle the logic
+      const showRandomToast = () => {
+        const randomTime = 6000;
+        const randomMessage =
+          messages[Math.floor(Math.random() * messages.length)];
+        notify(randomMessage);
+        return randomTime;
+      };
+
+      // Show the first toast
+      let nextTime = showRandomToast();
+
+      // Set up a recurring timer
+      const timer = setInterval(() => {
+        nextTime = showRandomToast();
+      }, nextTime);
+
+      // Cleanup
+      return () => {
+        clearInterval(timer);
+      };
+    }, 6000); // 6-second delay before the useEffect code runs
+
+    // Cleanup for the setTimeout
+    return () => {
+      clearTimeout(delayedEffect);
+    };
+  }, []);
   // const [zipCode, setZipCode] = useState("");
   // useEffect(() => {
   //   const fetchUserLocation = async () => {
@@ -246,6 +326,7 @@ export default function Fifth_SP() {
 
   return (
     <div>
+     <ToastContainer />
       <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
       Senior's Allowance Program 2024
       </div>
@@ -320,6 +401,16 @@ export default function Fifth_SP() {
         </div>
         {/* <p>{zipCode} </p> */}
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
