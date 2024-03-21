@@ -739,6 +739,6 @@ a{
   font-weight: bold;
 }
 .call-btn {
-    animation: glow 1.5s infinite alternate;
-    /* your existing styles for call-btn */
+  -webkit-animation: glow 1.5s infinite alternate;
+  animation: glow 1.5s infinite alternate
 }
