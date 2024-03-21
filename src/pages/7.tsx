@@ -24,6 +24,7 @@ export default function Fifth_SP() {
     enter: "toast-enter",
     exit: "toast-exit",
   });
+  
   const messages = [
     "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
     "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
@@ -31,18 +32,28 @@ export default function Fifth_SP() {
     "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
     "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
   ];
-  //   const messages = x.map(message =>  `${message}\n32 sec ago`);
-  const notify = (message: any) => {
+  
+  // Function to shuffle array in place
+  const shuffleArray = (array:any) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  };
+  
+  shuffleArray(messages);
+  
+  const notify = (message:any) => {
     // Dismiss all existing toasts
     toast.dismiss();
     let boldedMessage = message;
-
+  
     // Make the word "Allowance" bold in all lines
     boldedMessage = boldedMessage.replace(
       /\$3,600 Grocery Allowance/g,
       '<strong class="green-bold">$3,600 Grocery Allowance</strong>'
     );
-
+  
     // Make specific dollar amounts bold only in specific lines
     const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
     specialAmounts.forEach((amount) => {
@@ -53,6 +64,7 @@ export default function Fifth_SP() {
         );
       }
     });
+  
     // Show new toast
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
@@ -64,6 +76,7 @@ export default function Fifth_SP() {
       closeButton: false,
     });
   };
+  
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
       // Create a function to handle the logic
@@ -74,26 +87,27 @@ export default function Fifth_SP() {
         notify(randomMessage);
         return randomTime;
       };
-
+  
       // Show the first toast
       let nextTime = showRandomToast();
-
+  
       // Set up a recurring timer
       const timer = setInterval(() => {
         nextTime = showRandomToast();
       }, nextTime);
-
+  
       // Cleanup
       return () => {
         clearInterval(timer);
       };
     }, 6000); // 6-second delay before the useEffect code runs
-
+  
     // Cleanup for the setTimeout
     return () => {
       clearTimeout(delayedEffect);
     };
   }, []);
+  
   // const [zipCode, setZipCode] = useState("");
   // useEffect(() => {
   //   const fetchUserLocation = async () => {
