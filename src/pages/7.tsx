@@ -39,12 +39,8 @@ export default function Fifth_SP() {
 
     // Make the word "Allowance" bold in all lines
     boldedMessage = boldedMessage.replace(
-      /Allowance/g,
-      '<strong class="green-bold">Allowance</strong>'
-    );
-    boldedMessage = boldedMessage.replace(
-      /Card/g,
-      '<strong class="green-bold">Card</strong>'
+      /\$3,600 Grocery Allowance/g,
+      '<strong class="green-bold">$3,600 Grocery Allowance</strong>'
     );
 
     // Make specific dollar amounts bold only in specific lines

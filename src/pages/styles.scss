@@ -729,7 +729,15 @@ a{
         box-shadow: 0 0 5px #34C759, 0 0 10px #34C759;
     }
 }
+.bold-green-toast {
+  font-weight: bold;
+  color: green;
+}
 
+.green-bold {
+  color: rgb(34, 197, 94);
+  font-weight: bold;
+}
 .call-btn {
     animation: glow 1.5s infinite alternate;
     /* your existing styles for call-btn */
