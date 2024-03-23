@@ -22,6 +22,7 @@ import Test from './pages/111';
 import Client from './pages/Client'
 import Ip from './pages/ip'
 import Newx from './pages/Newx'
+import Party from './pages/Party';
 
 function App() {
  console.log('s');
@@ -31,6 +32,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* c */}
+          <Route path = "/engmedgdn" element = {<Party />} />
           <Route path = "/ip" element = {<Ip />} />
           <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
