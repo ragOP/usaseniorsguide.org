@@ -346,7 +346,7 @@ export default function Fifth_SP() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-                Americans Over 65 Can Now Qualify For The $3300 Food Allowance in 2024!
+                Americans Over 65 Can Now Qualify For The $3300 Food Allowance Card in 2024!
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
