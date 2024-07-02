@@ -24,6 +24,7 @@ import Ip from './pages/ip'
 import Newx from './pages/Newx'
 import Party from './pages/Party';
 import Food from './pages/Food';
+import Late from './pages/Late';
 
 function App() {
  console.log('s');
@@ -41,6 +42,7 @@ function App() {
           <Route path = "/spanaca2" element = {<Second_SP />} />
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
              <Route path = "/engmed1" element = {<S />} />
+         <Route path = "/engmedssd" element = {<Late/>} />
              <Route path = "/engmed2" element = {<Newx />} />
              <Route path = "/engmed11" element = {<Food />} />
              <Route path = "/km-engmed1" element = {<VeryNew />} /> 
