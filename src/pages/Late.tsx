@@ -26,7 +26,7 @@ export default function Fifth_SP() {
   });
   
   const messages = [
-    "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
+    "Emily A. Rodriguezs from Miami, FL just qualified for a $3,600 Grocery Allowance.",
     "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
     "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
     "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
