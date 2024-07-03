@@ -350,7 +350,10 @@ export default function Fifth_SP() {
                 </b>
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
-              <img className="topic-img-middle-z" src={Head_bg} alt="head" />
+{/*               <img className="topic-img-middle-z" src={Head_bg} alt="head" /> */}
+                <img className="topic-img-middle-z" src={Head_bg} alt="head" style={{ borderRadius: '5px' }} />
+
+                
               <div  style={{marginTop:'14px'}}className="main-des-5">
            Americans over 65 years old can claim the 2024 Social Security Check that gives them up to $1200. Americans can use the funds to fully cover their Groceries, Medicines, etc. at Walmart and thousands of other participating stores!
 
