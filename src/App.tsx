@@ -34,6 +34,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* c */}
+          <Route path = "/engmed900" element = {<VeryNew />} />
 {/*           <Route path = "/engmedgdn" element = {<Party />} />
           <Route path = "/ip" element = {<Ip />} />
           <Route path = "/engaca1" element = {<First_EN />} />
