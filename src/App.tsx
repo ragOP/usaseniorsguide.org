@@ -34,15 +34,15 @@ function App() {
       <div className="App">
         <Routes>
           {/* c */}
-          <Route path = "/engmedgdn" element = {<Party />} />
+{/*           <Route path = "/engmedgdn" element = {<Party />} />
           <Route path = "/ip" element = {<Ip />} />
           <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
-          <Route path = "/spanaca2" element = {<Second_SP />} />
+          <Route path = "/spanaca2" element = {<Second_SP />} /> */}
           {/* <Route path = "/engmed1" element = {<Third_EN />} /> */}
              <Route path = "/engmed1" element = {<S />} />
-         <Route path = "/engmedssd" element = {<Late/>} />
+{/*          <Route path = "/engmedssd" element = {<Late/>} />
              <Route path = "/engmed2" element = {<Newx />} />
              <Route path = "/engmed11" element = {<Food />} />
              <Route path = "/km-engmed1" element = {<VeryNew />} /> 
@@ -55,7 +55,7 @@ function App() {
           <Route path = "/spandeb1" element = {<Fifth_SP />} />
           <Route path = "/engdeb1" element = {<Sixth_SP />} />
           <Route path = "/engmedpn" element = {<Test />} />
-          <Route path = "/engmed28if" element = {<Client />} />
+          <Route path = "/engmed28if" element = {<Client />} /> */}
           {/* <Route path = "/a" element = {<S />} /> */}
 
           <Route path = "/view" element = {<Visits />} />
