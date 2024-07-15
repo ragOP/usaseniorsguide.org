@@ -27,14 +27,13 @@ import Food from './pages/Food';
 import Late from './pages/Late';
 
 function App() {
- console.log('s');
+ 
   return (
     
     <Router>
       <div className="App">
         <Routes>
-          {/* s */}
-          {/* c */}
+       
          <Route path = "/engmedssd" element = {<Late/>} />
           <Route path = "/engmed900" element = {<VeryNew />} />
 {/*           <Route path = "/engmedgdn" element = {<Party />} />
