@@ -25,6 +25,8 @@ import Newx from './pages/Newx'
 import Party from './pages/Party';
 import Food from './pages/Food';
 import Late from './pages/Late';
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 
 function App() {
  
@@ -36,6 +38,8 @@ function App() {
        
          <Route path = "/engmedssd" element = {<Late/>} />
           <Route path = "/engmed900" element = {<VeryNew />} />
+          <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
 {/*           <Route path = "/engmedgdn" element = {<Party />} />
           <Route path = "/ip" element = {<Ip />} />
           <Route path = "/engaca1" element = {<First_EN />} />
