@@ -8,6 +8,7 @@ import { scrollTo } from "../utils";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Head_bg from "../assets/ansari.png";
+import {  Link } from 'react-router-dom';
 import Headline from "../assets/headline_spandeb1.png";
 
 // google tag manager
@@ -404,8 +405,12 @@ export default function Abc() {
           </div>
         </div>
       )}
-      <div className="footer">
-        <div className="terms">Terms & Conditions | Privacy Policy</div>
+      <div className="footer2">
+      <div className="terms2">
+          <Link to="/terms-and-conditions">Terms & Conditions</Link> | 
+          <Link to="/privacy-policy">Privacy Policy</Link>
+        </div>
+        {/* <div className="terms2">Terms & Conditions | Privacy Policy</div> */}
         <div className="copyright">
           Copyright © 2024 - All right reserved Daily America Savings.
         </div>
