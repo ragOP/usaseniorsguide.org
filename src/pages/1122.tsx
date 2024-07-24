@@ -337,7 +337,7 @@ export default function Abc() {
 
   return (
     <div>
-     <ToastContainer />
+     {/* <ToastContainer /> */}
       <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
       Seniors Saving Journal
       </div>
@@ -414,7 +414,7 @@ export default function Abc() {
         </div>
         {/* <p>{zipCode} </p> */}
       </div>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-right"
         autoClose={5000}
         newestOnTop={false}
@@ -423,7 +423,7 @@ export default function Abc() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </div>
   );
 }
