@@ -202,6 +202,7 @@ export default function Abc() {
   const [second, setSecond] = useState<any>(0);
   const [yes,setYes]=useState("YES, I'M 65 OR OLDER")
   const [no,setNo]=useState("NO, I'M 64 OR YOUNGER")
+  const [skip, setSkip] = useState(false);
   
 
   const stepProcess = () => {
@@ -308,6 +309,7 @@ export default function Abc() {
       setQuiz("2. Do you live in the United States?");
     } else {
       setStep("Reviewing Your Answers...");
+      setSkip(true);
     
       topScroll("top");
     }
@@ -342,69 +344,72 @@ export default function Abc() {
       Senior's Allowance Program 2024
       </div>
       {step === "process" ? (
-        <>
-          <div className="main-container-5">
-            <div className="main-descrition-5-5">
-              <div className="main-des-title-6-7">
-                <b>
-                Americans Over 65 Can Now Qualify For The $3300 Food Allowance Card in 2024!
-                </b>
-              </div>
-              {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
-              <img className="topic-img-middle-z" src={Head_bg} alt="head" />
-              <div  style={{marginTop:'14px'}}className="main-des-5">
-              Americans over 65 years old can claim the 2024 Food Allowance Card that gives them up to $3300. Americans can use the funds to fully cover their Food, Medicines, etc. at Walmart and thousands of other participating stores!
+  <>
+    <div className="main-container-5">
+      <div className="main-descrition-5-5">
+        <div className="main-des-title-6-7">
+          <b>Americans Over 65 Can Now Qualify For The $3300 Food Allowance Card in 2024!</b>
+        </div>
+        {/* <img className='topic-img-larger' src={Headline} alt="head"/> */}
+        <img className="topic-img-middle-z" src={Head_bg} alt="head" />
+        <div style={{ marginTop: '14px' }} className="main-des-5">
+          Americans over 65 years old can claim the 2024 Food Allowance Card that gives them up to $3300. Americans can use the funds to fully cover their Food, Medicines, etc. at Walmart and thousands of other participating stores!
+        </div>
+        <div className="main-des-5" style={{ marginTop: '-5px' }}>
+          If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $3300 Food Allowance mailed to you within a few days ready for use!</b>
+        </div>
+        {/* <div className='main-des-5' style={{ marginTop: "1rem" }}><b>Simplemente responda las siguientes preguntas:</b></div> */}
+      </div>
+      <div style={{ marginTop: '-5px' }} className="survey">
+        <div className="quiz-5" id="btn">
+          {quiz}
+        </div>
+        <div className="answer">
+          <div className="answer-btn-5" onClick={handleQuizP}>
+            {yes}
+          </div>
+          <div className="answer-btn-5" onClick={handleQuizN}>
+            {no}
+          </div>
+        </div>
+      </div>
+    </div>
+  </>
+) : step === "completed" ? (
+  skip === false ? (
+    <div className="checking">
+      <div className="congrats">Congratulations, You Qualify!</div>
+      <div className="top-description-5">
+        Make A <b>Quick Call</b> To Claim Your Food Allowance!
+      </div>
+      <div className="spots-count">Spots remaining: 4</div>
+      <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
+      <a href="tel:+18553898466">
+        <div className="call-btn" onClick={handleCall}>
+          CALL (855) 389-8466
+        </div>
+      </a>
+      <div className="sub-title">We Have Reserved Your Spot</div>
+      <div className="sub-description">
+        Due to high call volume, your official agent is waiting for only <b>3 minutes</b>, then your spot will not be reserved.
+      </div>
+      <div className="timer">
+        <div className="timer-cell">{min}</div>
+        <div className="timer-cell">:</div>
+        <div className="timer-cell">{second}</div>
+      </div>
+    </div>
+  ) : (
+    <div className="checking">
+      <div className="congrats">Sorry, You Can Not Qualify!</div>
+    </div>
+  )
+) : (
+  <div className="checking" style={{ fontWeight: "700" }}>
+    {step}
+  </div>
+)}
 
-              </div>
-              <div className="main-des-5"  style={{marginTop:'-5px'}}>
-              If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $3300 Food Allowance mailed to you within a few days ready for use!</b>
-              </div>
-              {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
-            </div>
-            <div style={{marginTop:'-5px'}} className="survey">
-              <div className="quiz-5" id="btn">
-                {quiz}
-              </div>
-              <div  className="answer">
-                <div className="answer-btn-5" onClick={handleQuizP}>
-              {yes}
-                </div>
-                <div className="answer-btn-5" onClick={handleQuizN}>
-              {no}
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : step !== "process" && step !== "completed" ? (
-        <div className="checking" style={{ fontWeight: "700" }}>
-          {step}
-        </div>
-      ) : (
-        <div className="checking">
-          <div className="congrats">Congratulations, You Qualify!</div>
-          <div className="top-description-5">
-            Make A <b>Quick Call</b> To Claim Your Food Allowance!
-          </div>
-          <div className="spots-count">Spots remaining: 4</div>
-          <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18553898466">
-            <div className="call-btn" onClick={handleCall}>
-            CALL (855) 389-8466
-            </div>
-          </a>
-          <div className="sub-title">We Have Reserved Your Spot</div>
-          <div className="sub-description">
-            Due to high call volume, your official agent is waiting for only{" "}
-            <b>3 minutes</b>, then your spot will not be reserved.
-          </div>
-          <div className="timer">
-            <div className="timer-cell">{min}</div>
-            <div className="timer-cell">:</div>
-            <div className="timer-cell">{second}</div>
-          </div>
-        </div>
-      )}
       <div className="footer2">
       <div className="terms2">
           <Link to="/terms-and-conditions">Terms & Conditions</Link> | 
