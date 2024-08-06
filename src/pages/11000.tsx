@@ -388,9 +388,9 @@ export default function Abc() {
           </div>
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
-          <a href="tel:+18446720874">
+          <a href="tel:+18446491108">
             <div className="call-btn" onClick={handleCall}>
-            CALL (844) 672-0874
+            CALL (844) 649-1108
             </div>
           </a>
           <div className="sub-title">We Have Reserved Your Spot</div>
@@ -407,7 +407,7 @@ export default function Abc() {
       )}
       <div className="footer2">
       <div className="terms2">
-          <Link to="/terms-and-conditions">Terms & Conditions</Link> | 
+          <Link to="/terms-and-conditions">Terms & Condition</Link> | 
           <Link to="/privacy-policy">Privacy Policy</Link>
         </div>
         {/* <div className="terms2">Terms & Conditions | Privacy Policy</div> */}
