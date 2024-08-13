@@ -17,6 +17,7 @@ import S from './pages/7'
 import New from './pages/8'
 import Urgent from './pages/9'
 import VeryNew from './pages/10'
+import Midnight from './pages/Midnight'
 import Visits from "./pages/visits";
 import Test from './pages/111';
 import Client from './pages/Client'
@@ -42,6 +43,7 @@ function App() {
        
          <Route path = "/engmedssd" element = {<Late/>} />
           <Route path = "/engmed900" element = {<VeryNew />} />
+<Route path = "/engmed900nb" element = {<Midnight />} />
           <Route path = "/engmed3300" element = {<VeryNew1 />} />
           <Route path = "/engmedpin" element = {<Sed />} />
           <Route path = "/engmedquo" element = {<Sed1 />} />
