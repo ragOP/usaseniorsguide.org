@@ -30,6 +30,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import VeryNew1 from './pages/11000'
 import Ss from  './pages/SS'
+import Ss2 from  './pages/SS2'
 import VeryNew2 from './pages/1122'
 import Sed from "./pages/open"
 import Sed1 from "./pages/open1"
@@ -44,6 +45,8 @@ function App() {
        
          <Route path = "/engmedssd" element = {<Late/>} />
          <Route path = "/sbbeng" element = {<Ss/>} />
+         <Route path = "/awneng" element = {<Ss2/>} />
+         
           <Route path = "/engmed900" element = {<VeryNew />} />
 <Route path = "/engmed900nb" element = {<Midnight />} />
           <Route path = "/engmed3300" element = {<VeryNew1 />} />
