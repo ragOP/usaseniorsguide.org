@@ -44,71 +44,9 @@ export default function Abc() {
   
   shuffleArray(messages);
   
-  const notify = (message:any) => {
-    // Dismiss all existing toasts
-    toast.dismiss();
-    let boldedMessage = message;
+ 
   
-    // Make the word "Allowance" bold in all lines
-    boldedMessage = boldedMessage.replace(
-      /\$3,900 Food Allowance/g,
-      '<strong class="green-bold">$900 Food Allowance</strong>'
-    );
-  
-    // Make specific dollar amounts bold only in specific lines
-    const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
-    specialAmounts.forEach((amount) => {
-      if (message.includes(amount)) {
-        boldedMessage = boldedMessage.replace(
-          amount,
-          `<strong class="green-bold">${amount}</strong>`
-        );
-      }
-    });
-  
-    // Show new toast
-    toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      closeButton: false,
-    });
-  };
-  
-  useEffect(() => {
-    const delayedEffect = setTimeout(() => {
-      // Create a function to handle the logic
-      const showRandomToast = () => {
-        const randomTime = 20000;
-        const randomMessage =
-          messages[Math.floor(Math.random() * messages.length)];
-        notify(randomMessage);
-        return randomTime;
-      };
-  
-      // Show the first toast
-      let nextTime = showRandomToast();
-  
-      // Set up a recurring timer
-      const timer = setInterval(() => {
-        nextTime = showRandomToast();
-      }, nextTime);
-  
-      // Cleanup
-      return () => {
-        clearInterval(timer);
-      };
-    }, 20000); // 6-second delay before the useEffect code runs
-  
-    // Cleanup for the setTimeout
-    return () => {
-      clearTimeout(delayedEffect);
-    };
-  }, []);
-  
+ 
   // const [zipCode, setZipCode] = useState("");
   // useEffect(() => {
   //   const fetchUserLocation = async () => {
@@ -196,12 +134,12 @@ export default function Abc() {
     });
   };
 
-  const [quiz, setQuiz] = useState("Are you over the age of 64?  ");
+  const [quiz, setQuiz] = useState("Do you live in the U.S. ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState<any>(0);
-  const [yes,setYes]=useState("YES, I'M 65 OR OLDER")
-  const [no,setNo]=useState("NO, I'M 64 OR YOUNGER")
+  const [yes,setYes]=useState("YES")
+  const [no,setNo]=useState("NO")
   
 
   const stepProcess = () => {
@@ -267,7 +205,7 @@ export default function Abc() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Are you over the age of 64?  ") {
+    if (quiz === "Do you live in the U.S.   ") {
       setYes("Yes")
       setNo("No")
       setQuiz("2. Do you live in the United States?");
@@ -345,20 +283,11 @@ export default function Abc() {
         <>
           <div className="main-container-5">
             <div className="main-descrition-5-5">
-              <div className="main-des-title-6-7">
-                <b>
-                Americans Over 65 Can Now Qualify For The $900 Food Allowance Card in 2024!
-                </b>
-              </div>
-              {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
+            <div className="text-[#19329a] italic text-[0.9em] font-semibold text-center mb-[5px]" id="handleHeading">Medicare Recipients Could Qualify for Additional Medicare Benefits</div>
+            <p style={{textAlign: 'center',fontSize: '10px',}}>In order to see what additional benefits you can qualify for on your plan answer a few questions below and speak to a licensed insurance agent who can help you find plans that service&nbsp;your&nbsp;area.</p>              {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               {/* <img className="topic-img-middle-z" src={Head_bg} alt="head" /> */}
-              <div  style={{marginTop:'14px'}}className="main-des-5">
-              Americans over 65 years old can claim the 2024 Food Allowance Card that gives them up to $900. Americans can use the funds to fully cover their Food, Medicines, etc. at Walmart and thousands of other participating stores!
+              <img src={Head_bg} alt="head"className="mx-auto img-responsive wow flipInX animated  max-w-[250px] my-4" />
 
-              </div>
-              <div className="main-des-5"  style={{marginTop:'-5px'}}>
-              If you have not yet claimed your monthly allowance then answer the questions below and once approved <b>you will have your $900 Food Allowance mailed to you within a few days ready for use!</b>
-              </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
             <div style={{marginTop:'-5px'}} className="survey">
@@ -389,8 +318,8 @@ export default function Abc() {
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
           <a href="tel:+18446491108">             <div className="call-btn" onClick={handleCall}>             CALL (844) 649-1108             </div>           </a>
-          <div className="sub-title">We Have Reserved Your Spot</div>
           <div className="sub-description">
+          <div className="sub-title">We Have Reserved Your Spot</div>
             Due to high call volume, your official agent is waiting for only{" "}
             <b>3 minutes</b>, then your spot will not be reserved.
           </div>
@@ -401,18 +330,33 @@ export default function Abc() {
           </div>
         </div>
       )}
-      <div className="footer2">
-      <div className="terms2">
-          <Link to="/terms-and-conditions">Terms & Conditions</Link> | 
-          <Link to="/privacy-policy">Privacy Policy</Link>
+      <div className="footer3">
+      <div className="terms3">
+      <Link to="/privacy-policy">Privacy Policy</Link>
+
+          <Link to="/terms-and-conditions">Terms of Use</Link> 
+
+          <Link to="/terms-and-conditions">CCPA</Link> 
+
         </div>
         {/* <div className="terms2">Terms & Conditions | Privacy Policy</div> */}
-        <div className="copyright">
-          Copyright © 2024 - All right reserved Daily America Savings.
-        </div>
+        
         {/* <p>{zipCode} </p> */}
+      <p>We represent Medicare Advantage HMO, PPO and PFFS organizations and stand-alone PDP prescription drug plans that are contracted with Medicare. Enrollment depends on the plan’s contract renewal."
+      </p>
+      <p>Not all plans offer all of these benefits. Benefits may vary by carrier and location. Limitations and exclusions may apply.
+</p>
+<p>Enrollment in Medicare/Medicare Advantage may be limited to certain times of the year unless you qualify for a Special Enrollment Period
+
+</p>
+<p>americanprioritybenefits.com is not connected with or endorsed by the US government or Federal Medicare program. This website is a solicitation for insurance and Medicare Advantage, Part D or Medicare supplement insurance comparison services. Medicare supplement insurance is available to those age 65 or older enrolled in Medicare Parts A and B, and in some states to those under age 65 eligible to Medicare due to disability or end stage renal disease.
+</p>
+<p>We do not offer every plan available in your area. Currently we represent [insert number of organizations] organizations which offer [insert number of plans] products in your area. Please contact Medicare.gov, 1–800–MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.</p>
+<div className="copyright">
+          Copyright © 2024 - All right reserved Daily America Savings.
+        </div>  
       </div>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-right"
         autoClose={5000}
         newestOnTop={false}
@@ -421,7 +365,7 @@ export default function Abc() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </div>
   );
 }
