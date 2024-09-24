@@ -54,7 +54,7 @@ function App() {
 
           <Route path = "/engmed900" element = {<VeryNew />} />
           <Route path = "/engmed-tsf" element = {<Tsf/>} />
-         
+{/*          njxd */}
 <Route path = "/engmed900nb" element = {<Midnight />} />
           <Route path = "/engmed3300" element = {<VeryNew1 />} />
           <Route path = "/engmedpin" element = {<Sed />} />
