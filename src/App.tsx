@@ -36,6 +36,7 @@ import Sed from "./pages/open"
 import Sed1 from "./pages/open1"
 import Unique2 from './pages/Unique2';
 import Unique3 from './pages/Unique3';
+import Tsf from './pages/Tsf'
 
 function App() {
  
@@ -52,6 +53,8 @@ function App() {
          <Route path = "/engmedsf2" element = {<Unique3/>} />
 
           <Route path = "/engmed900" element = {<VeryNew />} />
+          <Route path = "/engmed-tsf" element = {<Tsf/>} />
+         
 <Route path = "/engmed900nb" element = {<Midnight />} />
           <Route path = "/engmed3300" element = {<VeryNew1 />} />
           <Route path = "/engmedpin" element = {<Sed />} />
