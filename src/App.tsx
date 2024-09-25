@@ -37,6 +37,7 @@ import Sed1 from "./pages/open1"
 import Unique2 from './pages/Unique2';
 import Unique3 from './pages/Unique3';
 import Tsf from './pages/Tsf'
+import Congrats from './pages/Congrats';
 
 function App() {
  
@@ -54,6 +55,7 @@ function App() {
 
           <Route path = "/engmed900" element = {<VeryNew />} />
           <Route path = "/engmed-tsf" element = {<Tsf/>} />
+          <Route path = "/congrats" element = {<Congrats/>} />
 {/*          njxd */}
 <Route path = "/engmed900nb" element = {<Midnight />} />
           <Route path = "/engmed3300" element = {<VeryNew1 />} />
