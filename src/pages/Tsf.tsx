@@ -353,7 +353,7 @@ export default function Tsf() {
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
               <div  style={{marginTop:'14px'}}className="main-des-5">
-              Americans over 65 years old can claim the 2024 Food Allowance Card that gives them up to $900. Americans can use the funds to fully cover their Food, Prescription. at Walmart and thousands of other participating stores!
+              Americans over 65 years old can claim the 2024 Food Allowance Card that gives them up to $900. Americans can use the funds to fully cover their Food, Prescriptions at Walmart and thousands of other participating stores!
 
               </div>
               <div className="main-des-5"  style={{marginTop:'-5px'}}>
