@@ -42,7 +42,7 @@ const Terms = () => {
     <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
     </li>
     <li>
-    <p><strong>Website</strong> refers to helpbenefit.org., accessible from <a href="https://www.foodallowances.org" rel="external nofollow noopener" target="_blank">https://www.foodallowances.org</a></p>
+    <p><strong>Website</strong> refers to helpbenefit.org., accessible from <a href="https://www.helpbenefit.org" rel="external nofollow noopener" target="_blank">https://www.helpbenefit.org</a></p>
     </li>
     <li>
     <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
