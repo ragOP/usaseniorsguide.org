@@ -47,20 +47,19 @@ function App() {
       <div className="App">
         <Routes>
        
-         <Route path = "/engmedssd" element = {<Late/>} />
-         <Route path = "/sbbeng" element = {<Ss/>} />
-         <Route path = "/awneng" element = {<Ss2/>} />
-         <Route path = "/engmedsf" element = {<Unique2/>} />
-         <Route path = "/engmedsf2" element = {<Unique3/>} />
+{/*          <Route path = "/engmedssd" element = {<Late/>} /> */}
+{/*          <Route path = "/sbbeng" element = {<Ss/>} /> */}
+         // <Route path = "/awneng" element = {<Ss2/>} />
+         // <Route path = "/engmedsf" element = {<Unique2/>} />
+{/*          <Route path = "/engmedsf2" element = {<Unique3/>} /> */}
 
-          <Route path = "/engmed900" element = {<VeryNew />} />
+{/*           <Route path = "/engmed900" element = {<VeryNew />} /> */}
           <Route path = "/engmed-tsf" element = {<Tsf/>} />
-          <Route path = "/congrats" element = {<Congrats/>} />
+{/*           <Route path = "/congrats" element = {<Congrats/>} /> */}
 {/*          njxd */}
-<Route path = "/engmed900nb" element = {<Midnight />} />
-          <Route path = "/engmed3300" element = {<VeryNew1 />} />
-          <Route path = "/engmedpin" element = {<Sed />} />
-          <Route path = "/engmedquo" element = {<Sed1 />} />
+
+         
+         
           <Route path = "/" element = {<VeryNew2 />} />
           <Route path="/terms-and-conditions" element={<Terms />} />
           <Route path="/privacy-policy" element={<Privacy />} />
